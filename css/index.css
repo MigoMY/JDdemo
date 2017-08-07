@@ -1,0 +1,511 @@
+
+body{
+    background: #f3f3f3;
+}
+
+.jd_viewport{
+    min-width: 300px;
+    max-width: 640px;
+
+    /*测试性质的高度*/
+    /*height: 3000px;*/
+
+
+    margin: 0 auto;
+    margin-bottom: 60px;
+    /*background: green;*/
+
+    position: relative;
+}
+
+/*顶部布局*/
+.jd_viewport .jd_header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 44px;
+    width: 100%;
+
+    z-index: 999;
+}
+.jd_header .jd_topbar{
+    min-width: 300px;
+    max-width: 640px;
+    height: 44px;
+    position: relative;
+    margin: 0 auto;
+
+    background: rgba(201, 21, 35, 0);
+}
+
+.jd_topbar .icon_logo{
+    position: absolute;
+    left: 5px;
+    top: 7px;
+
+    background-position: 0 -103px;
+    width: 60px;
+    height: 30px;
+}
+.jd_topbar .jd_login{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 50px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+.jd_topbar form{
+    padding-left: 70px;
+}
+
+.jd_topbar .icon_search{
+    left: 77px;
+}
+
+/*底部布局*/
+.jd_viewport .jd_footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*iPhone手机内部的tabBar默认高度是49*/
+    height: 50px;
+    background: #fff;
+
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 2px #ccc;
+}
+.jd_footer ul{
+    width: 100%;
+}
+.jd_footer ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.jd_footer ul li a{
+    width: 100%;
+    display: block;
+}
+.jd_footer ul li a img{
+    width: 65px;
+    height: 50px;
+}
+
+/*焦点图*/
+.jd_viewport .jd_banner{
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+}
+.jd_banner ul{
+    width: 1000%;
+
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+}
+.jd_banner ul li{
+    float: left;
+    width: 10%;
+}
+.jd_banner ul li a{
+    display: block;
+    width: 100%;
+}
+.jd_banner ul li a img{
+    width: 100%;
+}
+
+.jd_banner ol{
+    width: 144px;
+    height: 6px;
+
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    margin-left: -72px;
+}
+.jd_banner ol li{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    /* (144 - 8*6)/16 */
+    margin: 0 6px;
+}
+.jd_banner ol li.current{
+    background: #fff;
+}
+
+/*分类索引*/
+
+.jd_viewport .jd_categories{
+    width: 100%;
+    margin-top: 10px;
+}
+.jd_categories ul{
+    width: 100%;
+}
+.jd_categories ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.jd_categories ul li a{
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+.jd_categories ul li a img{
+    width: 40px;
+}
+
+.jd_categories ul li a p{
+    width: 100%;
+    height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/*产品中心3部曲*/
+.jd_viewport .jd_main{
+    width: 100%;
+    margin-top: 10px;
+}
+/*1st 秒杀类*/
+.jd_main .jd_seckill{
+    width: 100%;
+
+    /*伪高度,做完记得删哦*/
+    /*height: 200px;*/
+    background: #fff;
+}
+
+.jd_seckill .seckill_header{
+    width: 100%;
+    height: 36px;
+
+    /*background: lightcyan;*/
+}
+
+.seckill_header .seckill_header_left{
+    float: left;
+    width: 68%;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+}
+
+.seckill_header_left img.seckill_img{
+    float: left;
+    width: 69px;
+    height: 27px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.seckill_header_left strong{
+    float: left;
+    font-size: 15px;
+    margin-left: 5px;
+    height: 36px;
+    line-height: 36px;
+    /*font-family: "Microsoft JhengHei";*/
+    color: #181818;
+}
+
+.seckill_header_left .seckill_timer{
+    float: left;
+    margin-left: 6px;
+}
+
+.seckill_header_left .seckill_timer .time{
+    float: left;
+    width: 18px;
+    height: 17px;
+    line-height: 16px;
+    border: 1px solid #e0e0e0;
+    margin-top: 10px;
+
+}
+
+.seckill_header_left .seckill_timer span{
+    float: left;
+    color: #666;
+    width: 50%;
+
+    text-align: center;
+
+}
+.seckill_header_left .seckill_timer span.colon{
+    width: 6px;
+}
+
+.seckill_header .seckill_header_right
+{
+    float: right;
+    width: 32%;
+    color: #f23030;
+    text-align: right;
+    height: 36px;
+    line-height: 36px;
+    padding-right: 22px;
+
+    position: relative;
+}
+.seckill_header .seckill_header_right::after{
+    content: "";
+
+    background: url("../images/arrow_rt.png") no-repeat;
+    -webkit-background-size: 12px 12px;
+    background-size: 12px 12px;
+
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+    right: 8px;
+    top: 12px;
+}
+
+/*秒杀内容*/
+.jd_seckill .seckill_con{
+    width: 100%;
+}
+.seckill_con ul{
+    width: 100%;
+}
+.seckill_con ul li{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+
+    padding: 7px;
+
+}
+.seckill_con ul li a{
+    display: block;
+    width: 100%;
+    border-right: 1px solid #e0e0e0;
+}
+
+.seckill_con ul li:last-child a{
+    border-right: none;
+}
+.seckill_con ul li a img{
+    width: 80%;
+}
+
+.seckill_con ul li strong,
+.seckill_con ul li span{
+    display: block;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+}
+.seckill_con ul li strong{
+    color: #f23030;
+    font-size: 15px;
+}
+.seckill_con ul li span{
+    color: #666;
+    text-decoration: line-through;
+}
+
+/*2th 主题类产品*/
+.jd_main section{
+    width: 100%;
+    margin-top: 10px;
+
+    background: #fff;
+}
+
+/*标题*/
+.jd_main section .section_header{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section_header h3{
+    font-size: 15px;
+    font-weight: normal;
+    padding-left: 18px;
+
+    position: relative;
+}
+
+.section_header h3::before{
+    content: "";
+    background: #f23030;
+    width: 4px;
+    height: 26px;
+
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.jd_main section .section_con{
+    width: 100%;
+}
+.section_con img{
+    display: block;
+    width: 100%;
+}
+
+/*主题类产品的公共样式*/
+
+.half_w{
+    width: 50%;
+}
+.float_l{
+    float: left;
+}
+
+.float_r{
+    float: right;
+}
+.border_r{
+     border-right: 1px solid #e0e0e0;
+ }
+.border_l{
+    border-left: 1px solid #e0e0e0;
+}
+.border_b{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/*3th 推荐类*/
+.jd_main .jd_recommend{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.jd_recommend .recommend_header{
+    height: 36px;
+    line-height: 36px;
+    padding: 0 7px;
+    text-align: center;
+    /*background: lightblue;*/
+
+    position: relative;
+}
+
+.recommend_header .header_span{
+    background: #f3f3f3;
+    font-size: 16px;
+    padding: 3px 10px;
+    padding-left: 30px;
+
+    position: relative;
+}
+
+.recommend_header .header_span .arrow_img{
+    float: left;
+    background: url("../images/intro_arrow.png") no-repeat;
+
+    -webkit-background-size: 13px 13px;
+    background-size: 13px 13px;
+
+    width: 13px;
+    height: 13px;
+
+
+    position: absolute;
+    left: 10px;
+    top: 8px;
+
+    margin-right: 10px;
+}
+
+.jd_recommend .recommend_header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    
+    width: 100%;
+    height: 1px;
+
+    background: #e0e0e0;
+}
+
+.jd_recommend .recommend_con{
+    margin-top: 10px;
+    width: 100%;
+}
+/*推荐内容*/
+.recommend_con ul{
+    width: 100%;
+}
+
+.recommend_con ul li{
+    float: left;
+    width: 49%;
+
+    background: #fff;
+    /*height: 400px;*/
+    margin-bottom: 10px;
+}
+.recommend_con ul li:nth-of-type(2n){
+    float: right;
+}
+
+.recommend_con ul li>a{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.recommend_con ul li>a img{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.recommend_con ul li>a span{
+    padding: 2px 3px;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    height: 34px;
+    line-height: 15px;
+    overflow: hidden;
+}
+
+.recommend_con .recommend_con_bottom{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    padding: 7px;
+}
+.recommend_con .recommend_con_bottom .pro_price{
+    float: left;
+    color: #f23030;
+    font-size: 16px;
+    /*margin-left: 10px;*/
+
+}
+
+.recommend_con .recommend_con_bottom .find_like{
+    float: right;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    width: 60px;
+    font-size: 14px;
+    text-align: center;
+    height: 26px;
+    line-height: 26px;
+    /*margin-top: 5px;*/
+    /*margin-right: 10px;*/
+}
